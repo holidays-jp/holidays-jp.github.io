@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Holidays JP API (日本の祝日API)</title>
+  <meta name="description" content="Holidays JP API は、日本の祝日一覧をJSONで返却するAPIです。">
+  <meta content="https://avatars1.githubusercontent.com/u/24262823?v=3&amp;s=400" name="twitter:image:src" />
+  <meta content="https://avatars1.githubusercontent.com/u/24262823?v=3&amp;s=400" property="og:image" />
+  <link rel="icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/24262823?v=3&amp;s=400">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/2.0.7/marx.min.css">
+  <style>
+    h2 {
+      margin-top: 3em;
+    }
+    h3, h4, h5 {
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Holidays JP API</h1>
+    <p>日本の国民の祝日の一覧を、JSON形式で返すAPIです。</p>
+    <p>データは Google が用意している Googleカレンダーの情報から自動で生成しています。</p>
+    <p>去年・今年・来年のデータが取得可能です。</p>
+
+    <h2>基本API</h2>
+    <h3>URL</h3>
+    <p><a href="https://holidays-jp.github.io/api/index.json">https://holidays-jp.github.io/api/index.json</a></p>
+    <h3>返却例</h3>
+    <pre><code>{
+  "1420038000": {
+      "date": "2015-01-01",
+      "title": "元日"
+  },
+  "1420988400": {
+      "date": "2015-01-12",
+      "title": "成人の日"
+  },
+  "1423580400": {
+      "date": "2015-02-11",
+      "title": "建国記念の日"
+  }
+}</code></pre>
+    <p>unixtimeをキーに、date と title が入ったオブジェクトを返します。</p>
+
+    <h2>年別API</h2>
+    <h3>URL</h3>
+    <p><a href="https://holidays-jp.github.io/api/year/2017.json">https://holidays-jp.github.io/api/year/2017.json</a></p>
+    <p>上記URL <code>2017</code>の部分に、年号を4桁で指定します。</p>
+    <h3>返却例</h3>
+    <pre><code>{
+  "1483196400": {
+      "date": "2017-01-01",
+      "title": "元日"
+  },
+  "1483282800": {
+      "date": "2017-01-02",
+      "title": "元日 振替休日"
+  },
+  "1483887600": {
+      "date": "2017-01-09",
+      "title": "成人の日"
+  }
+}</code></pre>
+    <p>指定された年のデータだけを返します。返却形式は基本APIと同じです。</p>
+  </main>
+
+  <footer>
+    <a href="https://github.com/holidays-jp">https://github.com/holidays-jp</a>
+  </footer>
+</body>
+</html>
