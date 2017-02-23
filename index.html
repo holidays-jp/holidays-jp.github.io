@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Holidays JP API (日本の祝日API)</title>
-  <meta name="description" content="Holidays JP API は、日本の祝日一覧をJSONで返却するAPIです。">
+  <meta name="description" content="Holidays JP API は、日本の祝日一覧をJSONで返却するAPIです (CSV形式もサポート)">
   <meta content="https://avatars1.githubusercontent.com/u/24262823?v=3&amp;s=400" name="twitter:image:src" />
   <meta content="https://avatars1.githubusercontent.com/u/24262823?v=3&amp;s=400" property="og:image" />
   <link rel="icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/24262823?v=3&amp;s=400">
@@ -20,7 +20,7 @@
 <body>
   <main>
     <h1>Holidays JP API</h1>
-    <p>日本の国民の祝日の一覧を、JSON形式で返すAPIです。</p>
+    <p>日本の国民の祝日の一覧を、JSON形式もしくはCSV形式で返すAPIです。</p>
     <p>データは Google が用意している Googleカレンダーの情報から自動で生成しています。</p>
     <p>去年・今年・来年のデータが取得可能です。</p>
 
@@ -35,6 +35,16 @@
   "2017-01-09": "成人の日"
 }</code></pre>
     <p>日付をキーに、祝日名が入ったオブジェクトを返します。</p>
+
+
+    <h3>CSV</h3>
+    <p>URL末尾の拡張子部分を csv にすることで、CSV形式で返します(全API共通)。</p>
+    <p><a href="https://holidays-jp.github.io/api/v1/date.csv">https://holidays-jp.github.io/api/v1/date.csv</a></p>
+    <h3>返却例</h3>
+    <pre><code>2017-01-01,元日
+2017-01-02,"元日 振替休日"
+2017-01-09,成人の日
+</code></pre>
 
 
     <h2>祝日一覧API (datetime)</h2>
