@@ -1,4 +1,4 @@
-# Holidays JP API (日本の祝日 API)
+# Holidays JP API - 日本の祝日 API
 
 API service to get Japanese national holidays data, like this
 
